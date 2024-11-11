@@ -11,7 +11,7 @@
 
 ## Estructura de Entrega
 
-La entrega del proyecto será progresiva, respetando las fechas máximas definidas en cada lámina. Al finalizar, el repositorio deberá contener 7 ramas, que corresponderán a las siguientes etapas del proyecto:
+Esta rama contiene el diseño y estilo del proyecto mini market place:
 
 1. **feature/diseños-y-estilos**: En esta rama se realizarán los primeros cambios en el proyecto, implementando el diseño básico utilizando HTML5 y CSS3.
 
@@ -24,3 +24,7 @@ Este proyecto tiene como objetivo la creación de un **marketplace** utilizando 
 Cada fase del proyecto se desarrolla en ramas independientes, permitiendo un flujo de trabajo estructurado y controlado. A lo largo del proceso, se utilizarán herramientas como TypeScript, React, pruebas unitarias, y otras técnicas modernas de desarrollo web para garantizar la calidad y la escalabilidad del producto final.
 
 ---
+
+## Evidencia
+
+![Primera entrega](mini-marketplace/imagenes/html-css.png)
