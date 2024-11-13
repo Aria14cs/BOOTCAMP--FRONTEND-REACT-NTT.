@@ -59,6 +59,7 @@ font-style: italic;
 }
 
 /* Estilo para el contenedor del carrito con notificación */
+/* mantengamos un solo idioma no mezclemos más de 1, de preferencia usemos inglés. */
 .carrito-container {
     position: relative;
     display: inline-block;
@@ -68,6 +69,7 @@ font-style: italic;
     position: absolute;
     top: -5px;
     right: -5px;
+    /* los colores pueden ir como variables en el root */
     background-color:orangered;
     color: white;
     width: 20px;
@@ -107,6 +109,7 @@ input[type="text"], select {
 .producto {
     max-width: 350px;
     height: auto;
+    /* los colores pueden ir como variables en el root */
     background: #ffffff;
     border-radius: 8px;
     padding: 5px 10px;
