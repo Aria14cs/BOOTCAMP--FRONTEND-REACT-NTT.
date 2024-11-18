@@ -30,4 +30,4 @@ Cada fase del proyecto se desarrolla en ramas independientes, permitiendo un flu
 
 ## Evidencia
 
-![Primera entrega](mini-marketplace/imagenes/html-css.png)
+![Primera entrega](/mini-marketplace/mini-marketplace-v2/public/imagenes/html-css2.png)
