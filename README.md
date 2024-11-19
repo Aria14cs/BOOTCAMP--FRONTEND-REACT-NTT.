@@ -15,8 +15,8 @@ Esta rama contiene el diseño y estilo del proyecto mini market place:
 
 1. **feature/diseños-y-estilos**: En esta rama se realizarán los primeros cambios en el proyecto, implementando el diseño básico utilizando HTML5 y CSS3.
 2. **feature/javascript**: En esta rama se implementó la lógica para la búsqueda de productos y la selección de categorías. Además, se añadió el contador para el carrito de compras, que se actualiza al elegir un producto.
-
-2.1 Se trabajó con el consumo de las APIs brindadas para el producto y la categoría.
+   2.1 Se trabajó con el consumo de las APIs brindadas para el producto y la categoría.
+3. **feature/typescript** :Se migraron los archivod de js a ts.
 
 ---
 
