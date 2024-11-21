@@ -1,8 +1,9 @@
+// evitemos tener todo en un solo archivo, la idea es que cada archivo tenga una responsabilidad 'unica
 // importacion de apis
 import { urlProductos,urlCategoria } from "../Api/servicios";
 
 // Inicialización del carrito
-let carrito = [];
+const carrito = [];
 
 // Función para incrementar el carrito
 function incrementarCarrito() {
@@ -32,7 +33,6 @@ async function obtenerProductos(categoria = '') {
       throw new Error('Error al obtener los productos');
     }
     const datos = await respuesta.json();
-    console.log('Productos obtenidos:', datos.products); 
     return datos.products || []; 
   } catch (error) {
     console.error('Error al cargar los productos:', error);
