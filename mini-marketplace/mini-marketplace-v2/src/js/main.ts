@@ -1,8 +1,12 @@
+// evitemos tener muchas sub carpetas mini-marketplace > mini-marketplace-v2 solo deberia existir un unico directorio que contenga el proyecto 
+
+// no mezclar los idiomas ingl'es y espa;ol
 import { obtenerProductos, obtenerCategorias } from '../Api/servicios'
 import { Product, Category } from '../interfaces/Producto';
 
 // Inicialización del carrito
-let carrito: number[] = [];
+// si no se reasigna su valor entonces usemos const
+const carrito: number[] = [];
 
 // Función para incrementar el carrito
 function incrementarCarrito(): void {
@@ -26,6 +30,8 @@ async function cargarProductos(categoriaSeleccionada: string = '', terminoBusque
       contenedorProductos.removeChild(contenedorProductos.firstChild);
     }
 
+    // podemos usar un solo include [product.title, product.description].includes(terminoBusqueda)
+    // evitemos mezclar 2 idiomas 
     const productosFiltrados = productos.filter(producto =>
       producto.title.toLowerCase().includes(terminoBusqueda) ||
       producto.description.toLowerCase().includes(terminoBusqueda)
@@ -43,6 +49,7 @@ async function cargarProductos(categoriaSeleccionada: string = '', terminoBusque
       divProducto.classList.add('producto');
 
       const imgProducto = document.createElement('img');
+      // esta imagen podria estar en enum para evitar escribirla manualmente
       imgProducto.src = producto.images[0] || '../imagenes/iconos/default-product-image.jpg';
       imgProducto.alt = producto.title || 'Producto sin nombre';
       imgProducto.classList.add('img-producto');
