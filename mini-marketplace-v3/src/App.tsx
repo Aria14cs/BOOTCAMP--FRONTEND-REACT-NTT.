@@ -1,24 +1,13 @@
-import { useEffect, useState } from 'react'
-import Footer from './components/footer/footer'
-import Header from './components/header/header'
-import './App.css'
-import { getCharacter } from './services/character';
+import { useEffect, useState } from "react";
+import Home from "./pages/home";
+import "./App.css";
 
 function App() {
- 
-
-  useEffect(()=>{
- getCharacter(2);
-  },[])
-
-
   return (
     <>
-
-    <Header/>
-      <Footer/>
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,25 @@
+
+/* Estilos para el footer */
+footer {
+    color: var(--color-texto-color);
+    background: var(--primary-bg-color);
+    text-align: center;
+    padding: 20px;
+    /* margin-top: 25px; */
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+footer .iconos {
+    width: 24px;
+    height: 24px;
+}
+
+footer .iconos:hover {
+    transform: scale(1.2);
+}

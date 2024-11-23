@@ -1,5 +1,5 @@
-//Definir la estructura del servicio que response el servidor 
-export interface CharacterResponse {
+//
+export interface Character {
     id:                   number;
     title:                string;
     description:          string;
@@ -12,35 +12,13 @@ export interface CharacterResponse {
     brand:                string;
     sku:                  string;
     weight:               number;
-    dimensions:           Dimensions;
     warrantyInformation:  string;
     shippingInformation:  string;
     availabilityStatus:   string;
-    reviews:              Review[];
+
     returnPolicy:         string;
     minimumOrderQuantity: number;
-    meta:                 Meta;
     images:               string[];
-    thumbnail:            string;
+
 }
 
-export interface Dimensions {
-    width:  number;
-    height: number;
-    depth:  number;
-}
-
-export interface Meta {
-    createdAt: Date;
-    updatedAt: Date;
-    barcode:   string;
-    qrCode:    string;
-}
-
-export interface Review {
-    rating:        number;
-    comment:       string;
-    date:          Date;
-    reviewerName:  string;
-    reviewerEmail: string;
-}

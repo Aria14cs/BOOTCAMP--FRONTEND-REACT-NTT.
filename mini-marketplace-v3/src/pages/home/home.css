@@ -1,0 +1,17 @@
+.productos-lista{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+    gap: 25px;
+}
+
+.busqueda {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  
+  
+  }
