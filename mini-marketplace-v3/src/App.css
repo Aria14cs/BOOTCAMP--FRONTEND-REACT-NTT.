@@ -1,1 +1,38 @@
+/* Estilos para pantallas de tabletas */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  /* Ajustes en el header */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
+  .images-header {
+    gap: 20px;
+  }
+
+  /* Ajustes en la búsqueda */
+  .busqueda {
+    justify-content: flex-start;
+  }
+
+  .producto {
+    width: 45%;
+  }
+  .img-producto {
+    max-height: 200px;
+  }
+}
+
+/* Estilos para pantallas grandes (desktops) */
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 10px 10px;
+  }
+
+  .producto {
+    width: 30%;
+  }
+  .img-producto {
+    max-height: 220px;
+  }
+}

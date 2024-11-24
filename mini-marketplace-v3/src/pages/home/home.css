@@ -1,32 +1,25 @@
-
-
 :root {
-   
-    --precio-texto-color: #686D76;
+  --precio-texto-color: #686d76;
 }
 
-.contenedor-productos{
-    background: rgb(173, 176, 176);
+.contenedor-productos {
+  background: rgb(173, 176, 176);
 }
-.productos-lista{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 25px;
-    gap: 25px;
-  
+.productos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+  gap: 25px;
 }
 
 .busqueda {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
 
-  
-  }
-
- .contenedor-header-carrito{
-    background: black;
- }
+.contenedor-header-carrito {
+  background: black;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useCharacter } from "../hooks/useCharacter"; // Importamos el hook para los personajes
-import { useCart } from "../hooks/useCart"; // Importamos el hook para el carrito
+import { useCharacter } from "../hooks/useCharacter";
+import { useCart } from "../hooks/useCart";
 import CardProductos from "../components/card/cardProductos";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header";
@@ -10,10 +10,10 @@ import BusquedaPorProducto from "../components/input/input";
 import CarritoCompra from "../components/carrito-containe/carrito-containe";
 
 function Home() {
-  const { characters, categorias } = useCharacter(); // Usamos el hook para obtener los personajes y categorías
-  const { cartCount, addToCart } = useCart(); // Usamos el hook para obtener el contador del carrito y la función de añadir al carrito
-  const [selectedCategory, setSelectedCategory] = useState<string>(""); // Estado para la categoría seleccionada
-  const [searchQuery, setSearchQuery] = useState<string>(""); // Estado para la búsqueda
+  const { characters, categorias } = useCharacter();
+  const { cartCount, addToCart } = useCart();
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   // Filtra los productos por la categoría seleccionada
   const filteredCharacters = characters?.filter((character) => {
@@ -21,16 +21,16 @@ function Home() {
       !selectedCategory || character.category === selectedCategory;
     const matchesSearch =
       !searchQuery ||
-      character.title.toLowerCase().includes(searchQuery.toLowerCase()); // Filtrado por búsqueda
+      character.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   const handleCategoryChange = (categorySlug: string) => {
-    setSelectedCategory(categorySlug); // Actualiza el estado con la categoría seleccionada
+    setSelectedCategory(categorySlug);
   };
 
   const handleSearch = (query: string) => {
-    setSearchQuery(query); // Actualiza el estado con el valor de búsqueda
+    setSearchQuery(query);
   };
 
   return (
@@ -50,7 +50,7 @@ function Home() {
                 value: categoria.slug,
                 label: categoria.name,
               }))}
-              onCategoryChange={handleCategoryChange} // Proporcionamos la función para manejar el cambio
+              onCategoryChange={handleCategoryChange}
             />
           ) : (
             <p>No hay categorías disponibles</p>

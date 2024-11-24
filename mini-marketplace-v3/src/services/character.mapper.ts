@@ -20,10 +20,3 @@ export const getCategoriaMapper = (categoria: CategoriaResponse): Categoria => {
     name: categoria.name,
   };
 };
-
-// export const getBusquedaMapper = (busqueda: CategoriaResponse): Categoria => {
-//   return {
-//     slug: busqueda.slug,
-//     name: busqueda.name,
-//   };
-// };

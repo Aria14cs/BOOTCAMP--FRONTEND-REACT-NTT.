@@ -1,63 +1,66 @@
-
-/* Estilos para los productos */
 :root {
-   
-    --precio-texto-color: #686D76;
+  --precio-texto-color: #686d76;
+  --color-texto-color: #ffffff;
+  --background-producto-color: #f0f0f0;
 }
-.producto {
-    max-width: 350px;
-    min-height: auto;
-    /* los colores pueden ir como variables en el root */
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 5px 10px;
-    
+
+.productos {
+  max-width: 350px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 5px 10px;
 }
 
 .producto:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
-.imagenes-producto .img-producto {
-    width: 100%;
-    min-height: 200px;
-    background: black;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+.imagenes-producto {
+  position: relative;
+  width: 330px;
+  height: 200px;
+  background: var(--background-producto-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
 
+.img-producto {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .img-producto:hover {
-    transform: scale(0.9)
+  transform: scale(0.9);
 }
 
 .producto .nombre-producto {
-    font-size: 20px;
-
+  font-size: 20px;
 }
 
 .producto p {
-    font-size: 14px;
-    margin-top: 5px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .precio {
-    color: var(--precio-texto-color);
-    font-weight: bold;
-    
+  color: var(--precio-texto-color);
+  font-weight: bold;
 }
 
 .categoria {
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
 }
 
 .categoria-detalle {
-    background: black;
-    color: var(--color-texto-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block;
+  background: black;
+  color: var(--color-texto-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
 }

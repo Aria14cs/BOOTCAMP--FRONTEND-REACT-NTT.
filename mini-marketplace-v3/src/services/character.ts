@@ -51,34 +51,3 @@ export const getCategoria = async (): Promise<Categoria[] | undefined> => {
     return undefined; // Retornamos undefined si ocurre un error
   }
 };
-
-// // Función para obtener y mapear los datos
-// export const getBusquedaMapper = async (): Promise<Categoria[] | undefined> => {
-//   try {
-//     const response = await fetch(`${BASE_URL}/products/categories`);
-
-//     // Comprobamos si la respuesta fue exitosa
-//     if (!response.ok) {
-//       throw new Error("Error al obtener datos");
-//     }
-
-//     const dataBusqueda = await response.json();
-//     console.log("Respuesta de la API:", dataBusqueda);
-
-//     // Si la respuesta es directamente un arreglo de objetos
-//     if (Array.isArray(dataBusqueda)) {
-//       // Usamos el mapper para procesar los datos
-//       const busqueda = dataBusqueda.map(getBusquedaMapper); // Aquí aplicamos el mapper
-//       console.log("Categorías obtenidas:", busqueda);
-//       return busqueda;
-//     } else {
-//       throw new Error("La respuesta no es un arreglo.");
-//     }
-//   } catch (error) {
-//     console.error("Error al obtener las categorías:", error);
-//     if (error instanceof Error) {
-//       console.error("Detalles del error:", error.message);
-//     }
-//     return undefined; // Retornamos undefined si ocurre un error
-//   }
-// };
