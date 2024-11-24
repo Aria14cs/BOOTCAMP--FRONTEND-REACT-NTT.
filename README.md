@@ -1,6 +1,6 @@
 # Bootcamp Web
 
-## Documentación de la Rama `feature/javascript`
+## Documentación de la Rama `feature/react-fundamentos`
 
 ### Índice
 
@@ -17,6 +17,7 @@ Esta rama contiene el diseño y estilo del proyecto mini market place:
 2. **feature/javascript**: En esta rama se implementó la lógica para la búsqueda de productos y la selección de categorías. Además, se añadió el contador para el carrito de compras, que se actualiza al elegir un producto.
    2.1 Se trabajó con el consumo de las APIs brindadas para el producto y la categoría.
 3. **feature/typescript** :Se migraron los archivod de js a ts.
+4. **feature/react-fundamentos** :Migracion del proyecto de js a react con ts.
 
 ---
 
