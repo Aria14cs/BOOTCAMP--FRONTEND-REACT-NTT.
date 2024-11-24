@@ -1,5 +1,12 @@
 
 /* Estilos para el footer */
+
+:root {
+    --primary-bg-color: black;
+    --button-productos-bg-color: #6EACDA;
+    --color-texto-color: #ffffff;
+    --precio-texto-color: #686D76;
+}
 footer {
     color: var(--color-texto-color);
     background: var(--primary-bg-color);

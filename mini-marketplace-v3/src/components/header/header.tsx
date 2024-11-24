@@ -12,14 +12,6 @@ function Header() {
             />
           </div>
           <h1>G & E </h1>
-          <div className="carrito-container">
-            <img
-              src="/src/assets/imagenes/iconos/carrito.svg"
-              className="carrito"
-              alt="Carrito"
-            />
-            <span className="notificacion">3</span>
-          </div>
         </div>
       </header>
     </>

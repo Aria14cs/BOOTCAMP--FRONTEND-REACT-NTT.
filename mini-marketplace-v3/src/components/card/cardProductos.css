@@ -6,9 +6,9 @@
 }
 .producto {
     max-width: 350px;
-    height: 650px;
+    min-height: auto;
     /* los colores pueden ir como variables en el root */
-    background:violet;
+    background: #ffffff;
     border-radius: 8px;
     padding: 5px 10px;
     

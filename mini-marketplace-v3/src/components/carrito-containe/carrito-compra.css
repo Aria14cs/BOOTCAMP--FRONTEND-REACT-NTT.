@@ -1,0 +1,30 @@
+.carrito-container {
+  position: relative;
+  display: inline-block;
+  background: black;
+  height: 60px;
+}
+
+.notificacion {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  /* los colores pueden ir como variables en el root */
+  background-color:orangered;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.contenedor-header-carrito {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Espacia los elementos, ajusta según tu necesidad */
+  padding: 0 20px; /* Espaciado para no tocar los bordes */
+}
