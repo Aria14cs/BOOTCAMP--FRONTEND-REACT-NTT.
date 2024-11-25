@@ -1,0 +1,52 @@
+/* formulario.css */
+.formulario-container {
+  max-width: 500px;
+  margin: 50px auto; /* Centrar horizontal y añadir espacio vertical */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column; /* Asegurar disposición vertical */
+  align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+.formulario-lista {
+  list-style: none;
+  padding: 0;
+  width: 80%; /* Para que los campos ocupen el ancho completo del contenedor */
+}
+
+.campo-formulario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%; /* Asegura que todos los campos se alineen correctamente */
+}
+
+.campo-formulario label {
+  width: 30%; /* Ancho fijo para todos los labels */
+  text-align: right; /* Texto del label alineado a la derecha */
+  font-weight: bold;
+  padding-right: 10px; /* Espaciado entre label y input */
+}
+
+.campo-formulario input {
+  width: 65%; /* Espacio restante para el input */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campo-formulario input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.boton {
+  display: block;
+  margin-top: 20px; /* Separar el botón del formulario */
+  cursor: pointer;
+  text-align: center;
+}

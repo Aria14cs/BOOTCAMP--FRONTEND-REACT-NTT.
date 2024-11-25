@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { useCharacter } from "../hooks/useCharacter";
-import { useCart } from "../hooks/useCart";
-import CardProductos from "../components/card/cardProductos";
-import Footer from "../components/footer/footer";
-import Header from "../components/header/header";
-import "./home/home.css";
-import SelectorCategoria from "../components/selector/selector";
-import BusquedaPorProducto from "../components/input/input";
-import CarritoCompra from "../components/carrito-containe/carrito-containe";
+import { useCharacter } from "../../hooks/useCharacter";
+import { useCart } from "../../hooks/useCart";
+import CardProductos from "../../components/card/cardProductos";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
+import "./home.css";
+import SelectorCategoria from "../../components/selector/selector";
+import BusquedaPorProducto from "../../components/input/input";
+import CarritoCompra from "../../components/carrito-containe/carrito-containe";
+import { Link } from "react-router-dom";
 
 function Home() {
   const { characters, categorias } = useCharacter();
-  const { cartCount, addToCart } = useCart();
+  const { cartItems, addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
@@ -38,7 +39,7 @@ function Home() {
       <div className="contenedor-productos">
         <div className="contenedor-header-carrito">
           <Header />
-          <CarritoCompra cantidadProductos={cartCount} />
+          <CarritoCompra cantidadProductos={cartItems.length} />
         </div>
 
         <div className="busqueda">
@@ -64,7 +65,7 @@ function Home() {
               <CardProductos
                 key={character.id}
                 character={character}
-                onAddToCart={addToCart}
+                onAddToCart={() => addToCart(character)}
               />
             ))}
           </div>

@@ -1,0 +1,83 @@
+/* Estilos generales para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Estilo de las filas de la tabla */
+tbody tr {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #f4f4f4; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilo de las celdas con imágenes */
+td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Estilo de los botones dentro de la tabla */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo del botón de eliminar */
+button.eliminar {
+  background-color: #ff4d4d;
+}
+
+button.eliminar:hover {
+  background-color: #ff1a1a;
+}
+
+/* Estilo para la cantidad de productos */
+span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Estilo para el resumen del total */
+h3 {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
