@@ -2,6 +2,9 @@ import React from "react";
 import { useCart } from "../../hooks/useCart";
 import Formulario from "../../components/formulario/formulario";
 import "./resumen.css";
+import Header from "../../components/header/header";
+import CarritoCompra from "../../components/carrito-containe/carrito-containe";
+import Boton from "../../components/botones/boton";
 
 const Resumen = () => {
   const {
@@ -59,9 +62,13 @@ const Resumen = () => {
 
   return (
     <div>
-      <h2>Resumen del Carrito</h2>
+      <div className="contenedor-header-carrito">
+        <Header />
+        <CarritoCompra cantidadProductos={cartItems.length} />
+      </div>
 
       {/* Mostrar productos en el carrito */}
+
       <table>
         <thead>
           <tr>
@@ -85,18 +92,27 @@ const Resumen = () => {
               <td>{item.product.title}</td>
               <td>${item.product.price}</td>
               <td>
-                <button onClick={() => decreaseQuantity(item.product.id)}>
-                  -
-                </button>
+                <Boton
+                  text="-"
+                  color="blue"
+                  size="small"
+                  onClick={() => decreaseQuantity(item.product.id)}
+                />
                 {item.quantity}
-                <button onClick={() => increaseQuantity(item.product.id)}>
-                  +
-                </button>
+                <Boton
+                  text="+"
+                  color="blue"
+                  size="small"
+                  onClick={() => increaseQuantity(item.product.id)}
+                />
               </td>
               <td>
-                <button onClick={() => removeFromCart(item.product.id)}>
-                  Eliminar
-                </button>
+                <Boton
+                  text="Eliminar"
+                  color="blue"
+                  size="small"
+                  onClick={() => removeFromCart(item.product.id)}
+                />
               </td>
             </tr>
           ))}
@@ -110,7 +126,6 @@ const Resumen = () => {
           0
         )}
       </h3>
-
       <Formulario campos={campos} onSubmit={manejarSubmit} />
     </div>
   );

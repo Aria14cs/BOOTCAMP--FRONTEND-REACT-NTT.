@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CampoFormulario from "../campo-formulario/campo-formulario";
 import Boton from "../botones/boton";
 import "./formulario.css";
+import Title from "../../components/title/title";
 
 interface CampoFormularioConfig {
   label: string;
@@ -54,6 +55,12 @@ const Formulario: React.FC<FormularioProps> = ({ campos, onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="formulario-container">
+      <Title
+        text="Información de envio"
+        size="large"
+        align="center"
+        color="black"
+      />
       <ul className="formulario-lista">
         {campos.map((campo, index) => (
           <li key={index}>
@@ -70,6 +77,7 @@ const Formulario: React.FC<FormularioProps> = ({ campos, onSubmit }) => {
           </li>
         ))}
       </ul>
+
       <Boton text="Comprar" color="blue" size="large" />
     </form>
   );

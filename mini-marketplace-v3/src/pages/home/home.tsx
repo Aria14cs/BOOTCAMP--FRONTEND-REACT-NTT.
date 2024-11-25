@@ -8,7 +8,6 @@ import "./home.css";
 import SelectorCategoria from "../../components/selector/selector";
 import BusquedaPorProducto from "../../components/input/input";
 import CarritoCompra from "../../components/carrito-containe/carrito-containe";
-import { Link } from "react-router-dom";
 
 function Home() {
   const { characters, categorias } = useCharacter();
