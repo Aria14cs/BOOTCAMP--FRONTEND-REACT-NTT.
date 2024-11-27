@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 interface CarritoCompraProps {
   cantidadProductos: number;
 }
-
+// la carpeta y el nombre del componente no tienen relaci'on
 const CarritoCompra: React.FC<CarritoCompraProps> = ({ cantidadProductos }) => {
+  // los paths podr'ian estar en enum para evitar escribirlos directamente y tener errores
   return (
     <div className="carrito-container">
       <Link to="/resumen">

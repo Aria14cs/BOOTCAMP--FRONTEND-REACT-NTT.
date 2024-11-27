@@ -1,3 +1,4 @@
+// no dejar console ni comentarios, si el c'odigo est'a bien estructurado no es necesario
 import { Character } from "../domain/character/character";
 import { Categoria } from "../domain/categoria/categoria";
 import { getCharacterMapper, getCategoriaMapper } from "./character.mapper";
@@ -41,7 +42,7 @@ export const getCategoria = async (): Promise<Categoria[] | undefined> => {
       console.log("Categorías obtenidas:", categorias);
       return categorias;
     } else {
-      throw new Error("La respuesta no es un arreglo.");
+      throw new Error("La respuesta no es un arreglo."); // por qu'e dejar'ia de ser un arreglo? en caso cambie ser'ia un error del backend
     }
   } catch (error) {
     console.error("Error al obtener las categorías:", error);
