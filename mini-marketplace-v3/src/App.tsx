@@ -1,21 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ModuleRoutes } from "./routes/routes";
 import Home from "./pages/home/home";
 
 import "./App.css";
 import Resumen from "./pages/resumen/resumen";
 
-function App() {
+const App: React.FC = () => {
   // las rutas pueden estar en enum para evitar escribirlas manualmente
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resumen" element={<Resumen />} />
+          <Route path={ModuleRoutes.Home} element={<Home />} />
+          <Route path={ModuleRoutes.Resumen} element={<Resumen />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;
