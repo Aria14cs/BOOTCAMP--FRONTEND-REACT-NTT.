@@ -1,3 +1,6 @@
+
+// no dejar comentarios, ya que si el c'odigo esta bien estructurado no son necesarios
+// el formulario no valida acepta cualquier valor
 import React, { useState } from "react";
 import CampoFormulario from "../campo-formulario/campo-formulario";
 import Boton from "../botones/boton";
@@ -20,8 +23,10 @@ interface FormularioProps {
 
 const Formulario: React.FC<FormularioProps> = ({ campos, onSubmit }) => {
   // Estado para manejar los valores del formulario
+  // por qu'e usar any? por qu'e no tiparlos?
   const [formValues, setFormValues] = useState<any>({});
   // Estado para manejar los errores de validación
+  // por qu'e usar any? por qu'e no tiparlos?
   const [errores, setErrores] = useState<any>({});
 
   // Función para manejar el cambio de valores en los campos

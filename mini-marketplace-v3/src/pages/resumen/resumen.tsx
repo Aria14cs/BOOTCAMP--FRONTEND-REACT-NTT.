@@ -15,6 +15,8 @@ const Resumen = () => {
     removeFromCart,
   } = useCart();
 
+  // valores esta'ticos deben estar fuera del componente
+  // no mezclar epa;ol e ingl'es
   const campos = [
     {
       label: "Nombre",
@@ -119,6 +121,7 @@ const Resumen = () => {
         </tbody>
       </table>
 
+    {/* la logica de sumatoria deber'ia estar en una funci'on o en un util */}
       <h3>
         Total: $
         {cartItems.reduce(
