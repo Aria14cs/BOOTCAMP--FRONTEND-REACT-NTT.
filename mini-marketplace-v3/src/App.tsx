@@ -5,6 +5,7 @@ import "./App.css";
 import Resumen from "./pages/resumen/resumen";
 
 function App() {
+  // las rutas pueden estar en enum para evitar escribirlas manualmente
   return (
     <>
       <Router>

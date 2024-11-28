@@ -4,9 +4,8 @@ import { getCharacter, getCategoria } from "../services/character";
 import { Categoria } from "../domain/categoria/categoria";
 
 export const useCharacter = () => {
-  const [characters, setCharacters] = useState<Character[] | undefined>(
-    undefined
-  );
+  // 2 idiomas
+  const [characters, setCharacters] = useState<Character[]>();
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
   useEffect(() => {
