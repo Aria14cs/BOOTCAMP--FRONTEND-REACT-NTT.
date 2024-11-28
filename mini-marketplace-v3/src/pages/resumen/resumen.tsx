@@ -3,7 +3,7 @@ import { useCart } from "../../hooks/useCart";
 import Formulario from "../../components/formulario/formulario";
 import "./resumen.css";
 import Header from "../../components/header/header";
-import CarritoCompra from "../../components/carrito-containe/carrito-containe";
+import CarritoCompra from "../../components/carrito-compra/carrito-compra";
 import Boton from "../../components/botones/boton";
 
 const Resumen = () => {
@@ -121,7 +121,7 @@ const Resumen = () => {
         </tbody>
       </table>
 
-    {/* la logica de sumatoria deber'ia estar en una funci'on o en un util */}
+      {/* la logica de sumatoria deber'ia estar en una funci'on o en un util */}
       <h3>
         Total: $
         {cartItems.reduce(

@@ -7,7 +7,7 @@ import Header from "../../components/header/header";
 import "./home.css";
 import SelectorCategoria from "../../components/selector/selector";
 import BusquedaPorProducto from "../../components/input/input";
-import CarritoCompra from "../../components/carrito-containe/carrito-containe";
+import CarritoCompra from "../../components/carrito-compra/carrito-compra";
 
 function Home() {
   const { characters, categorias } = useCharacter();

@@ -1,6 +1,7 @@
 import React from "react";
 import "./carrito-compra.css";
 import { Link } from "react-router-dom";
+import { ModuleRoutes } from "@/routes/routes";
 
 interface CarritoCompraProps {
   cantidadProductos: number;
@@ -10,7 +11,7 @@ const CarritoCompra: React.FC<CarritoCompraProps> = ({ cantidadProductos }) => {
   // los paths podr'ian estar en enum para evitar escribirlos directamente y tener errores
   return (
     <div className="carrito-container">
-      <Link to="/resumen">
+      <Link to={ModuleRoutes.Resumen}>
         <img
           src="/src/assets/imagenes/iconos/carrito.svg"
           className="carrito"
