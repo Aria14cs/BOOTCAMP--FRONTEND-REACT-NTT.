@@ -1,4 +1,3 @@
-// no dejar console ni comentarios, si el c'odigo est'a bien estructurado no es necesario
 import { Productos } from "../domain/productos/productos";
 import { Categoria } from "../domain/categoria/categoria";
 import { getProductosMapper, getCategoriaMapper } from "./productos.mapper";
@@ -11,13 +10,10 @@ export const getProductos = async (): Promise<Productos[] | undefined> => {
     if (!response.ok) {
       throw new Error("Error al obtener datos");
     }
-
     const data = await response.json();
-
-    const characters = data.products.map(getProductosMapper);
-
-    console.log({ characters });
-    return characters;
+    const getProductosData = data.products.map(getProductosMapper);
+    console.log({ getProductosData });
+    return getProductosData;
   } catch (error) {
     console.log({ error });
   }
@@ -27,28 +23,15 @@ export const getCategoria = async (): Promise<Categoria[] | undefined> => {
   try {
     const response = await fetch(`${BASE_URL}/products/categories`);
 
-    // Comprobamos si la respuesta fue exitosa
     if (!response.ok) {
       throw new Error("Error al obtener datos");
     }
-
     const dataCategoria = await response.json();
     console.log("Respuesta de la API:", dataCategoria);
-
-    // Si la respuesta es directamente un arreglo de objetos
-    if (Array.isArray(dataCategoria)) {
-      // Mapear los elementos directamente como categorías
-      const categorias = dataCategoria.map(getCategoriaMapper);
-      console.log("Categorías obtenidas:", categorias);
-      return categorias;
-    } else {
-      throw new Error("La respuesta no es un arreglo."); // por qu'e dejar'ia de ser un arreglo? en caso cambie ser'ia un error del backend
-    }
+    const getDataCategoria = dataCategoria.map(getCategoriaMapper);
+    console.log({ getDataCategoria });
   } catch (error) {
-    console.error("Error al obtener las categorías:", error);
-    if (error instanceof Error) {
-      console.error("Detalles del error:", error.message);
-    }
-    return undefined; // Retornamos undefined si ocurre un error
+    console.error("Error al obtener categorías:", error);
+    return undefined;
   }
 };

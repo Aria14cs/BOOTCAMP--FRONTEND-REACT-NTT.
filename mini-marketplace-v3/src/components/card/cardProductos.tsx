@@ -1,10 +1,10 @@
 import React from "react";
-import { Character } from "../../domain/productos/productos";
+import { Productos } from "../../domain/productos/productos";
 import Boton from "../botones/boton";
 import "./cardProductos.css";
 
 interface CardProductos {
-  character: Character;
+  character: Productos;
   onAddToCart: () => void; // Función para añadir al carrito
 }
 
