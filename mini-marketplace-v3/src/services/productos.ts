@@ -1,11 +1,11 @@
 // no dejar console ni comentarios, si el c'odigo est'a bien estructurado no es necesario
-import { Character } from "../domain/character/character";
+import { Productos } from "../domain/productos/productos";
 import { Categoria } from "../domain/categoria/categoria";
-import { getCharacterMapper, getCategoriaMapper } from "./character.mapper";
+import { getProductosMapper, getCategoriaMapper } from "./productos.mapper";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-export const getCharacter = async (): Promise<Character[] | undefined> => {
+export const getProductos = async (): Promise<Productos[] | undefined> => {
   try {
     const response = await fetch(`${BASE_URL}/products`);
     if (!response.ok) {
@@ -14,7 +14,7 @@ export const getCharacter = async (): Promise<Character[] | undefined> => {
 
     const data = await response.json();
 
-    const characters = data.products.map(getCharacterMapper);
+    const characters = data.products.map(getProductosMapper);
 
     console.log({ characters });
     return characters;

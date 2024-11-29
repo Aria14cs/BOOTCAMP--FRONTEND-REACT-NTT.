@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Character } from "../domain/character/character";
+import { Productos } from "../domain/productos/productos";
 
 interface CartItem {
-  product: Character;
+  product: Productos;
   quantity: number;
 }
 
@@ -27,7 +27,7 @@ export const useCart = () => {
   }, [cartItems]);
 
   // Agregar un producto al carrito
-  const addToCart = (product: Character) => {
+  const addToCart = (product: Productos) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find(
         (item) => item.product.id === product.id
@@ -64,8 +64,8 @@ export const useCart = () => {
         prevItems
           .map((item) =>
             item.product.id === productId && item.quantity > 1
-            // por qu'e -1?
-              ? { ...item, quantity: item.quantity - 1 }
+              ? // por qu'e -1?
+                { ...item, quantity: item.quantity - 1 }
               : item
           )
           .filter((item) => item.quantity > 0) // Eliminar los productos con cantidad 0

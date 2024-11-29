@@ -1,5 +1,5 @@
 import React from "react";
-import { Character } from "../../domain/character/character";
+import { Character } from "../../domain/productos/productos";
 import Boton from "../botones/boton";
 import "./cardProductos.css";
 
@@ -29,7 +29,7 @@ const CardProductos: React.FC<CardProductos> = ({ character, onAddToCart }) => {
       {/* Botón para añadir al carrito */}
       <Boton
         text="Añadir al carrito"
-        color="green"
+        color="AzulCielo"
         size="large"
         onClick={onAddToCart}
       />

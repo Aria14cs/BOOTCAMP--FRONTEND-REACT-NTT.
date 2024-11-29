@@ -5,7 +5,6 @@ interface BotonProps {
   color: string;
   size: "small" | "medium" | "large";
   onClick?: () => void;
-  disabled?: boolean;
 }
 
 const Boton: React.FC<BotonProps> = ({ text, color, size, onClick }) => {

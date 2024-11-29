@@ -10,13 +10,13 @@ import BusquedaPorProducto from "../../components/input/input";
 import CarritoCompra from "../../components/carrito-compra/carrito-compra";
 
 function Home() {
-  const { characters, categorias } = useCharacter();
+  const { productos, categorias } = useCharacter();
   const { cartItems, addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   // Filtra los productos por la categoría seleccionada
-  const filteredCharacters = characters?.filter((character) => {
+  const filteredCharacters = productos?.filter((character) => {
     const matchesCategory =
       !selectedCategory || character.category === selectedCategory;
     const matchesSearch =

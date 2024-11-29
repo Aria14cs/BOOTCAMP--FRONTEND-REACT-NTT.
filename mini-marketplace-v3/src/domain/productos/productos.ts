@@ -1,5 +1,5 @@
 //lista de productos
-export interface Character {
+export interface Productos {
   id: number;
   title: string;
   description: string;

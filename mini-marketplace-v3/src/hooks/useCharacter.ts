@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import { Character } from "../domain/character/character";
-import { getCharacter, getCategoria } from "../services/character";
+import { Productos } from "../domain/productos/productos";
+import { getProductos, getCategoria } from "../services/productos";
 import { Categoria } from "../domain/categoria/categoria";
 
 export const useCharacter = () => {
   // 2 idiomas
-  const [characters, setCharacters] = useState<Character[]>();
+  const [productos, setProductos] = useState<Productos[]>();
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
   useEffect(() => {
-    const getCharacterData = async () => {
+    const getProductosData = async () => {
       try {
-        const charactersData = await getCharacter();
-        if (charactersData) {
-          setCharacters(charactersData);
+        const productosData = await getProductos();
+        if (productosData) {
+          setProductos(productosData);
         }
       } catch (error) {
         console.log({ error });
@@ -31,9 +31,9 @@ export const useCharacter = () => {
       }
     };
 
-    getCharacterData();
+    getProductosData();
     getCategoriaData();
   }, []);
 
-  return { characters, categorias };
+  return { productos, categorias };
 };

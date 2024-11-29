@@ -33,7 +33,7 @@
   background-color: red;
 }
 
-.button-green {
+.button-AzulCielo {
   background: var(--button-productos-bg-color);
 }
 
@@ -46,7 +46,7 @@
   background-color: darkred;
 }
 
-.button-green:hover {
+.button-AzulCielo :hover {
   background-color: var(--button-productos-bg-color);
 }
 
