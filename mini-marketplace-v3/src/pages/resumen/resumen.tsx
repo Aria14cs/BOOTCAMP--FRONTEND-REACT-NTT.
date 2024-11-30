@@ -5,6 +5,7 @@ import Header from "../../components/header/header";
 import CarritoCompra from "../../components/carrito-compra/carrito-compra";
 import CarritoTabla from "../../components/tabla/CarritoTable";
 import CarritoTotal from "../../components/tabla/CarritoTotal";
+import SelectDistritos from "../../components/SelectorDistrito/distritosLima"; // Asegúrate de importar SelectDistritos
 import "./resumen.css";
 
 const Resumen = () => {
@@ -13,7 +14,14 @@ const Resumen = () => {
   const campos = [
     { label: "Nombre", type: "text", id: "nombre", name: "nombre" },
     { label: "Apellidos", type: "text", id: "apellidos", name: "apellidos" },
-    { label: "Distrito", type: "text", id: "distrito", name: "distrito" },
+    // El campo "Distrito" se reemplaza por el componente SelectDistritos
+    {
+      label: "Distrito",
+      type: "select",
+      id: "distrito",
+      name: "distrito",
+      component: <SelectDistritos />,
+    },
     { label: "Dirección", type: "text", id: "direccion", name: "direccion" },
     { label: "Referencia", type: "text", id: "referencia", name: "referencia" },
     { label: "Celular", type: "number", id: "celular", name: "celular" },
