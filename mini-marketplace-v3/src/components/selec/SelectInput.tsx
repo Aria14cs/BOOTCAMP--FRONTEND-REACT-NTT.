@@ -6,6 +6,7 @@ interface SelectInputProps {
   onChange: (value: string) => void;
   label: string;
   className?: string;
+  placeholder?: string;
 }
 
 const SelectInput: React.FC<SelectInputProps> = ({
@@ -14,16 +15,17 @@ const SelectInput: React.FC<SelectInputProps> = ({
   onChange,
   label,
   className,
+  placeholder = "Seleccione una opción",
 }) => {
   return (
     <div className={`select-input-container ${className}`}>
-      <label>{label}</label>
+      {label && <label>{label}</label>}
       <select
         value={selectedValue}
         onChange={(e) => onChange(e.target.value)}
         className="select-input"
       >
-        <option value="">Seleccione un distrito</option>
+        <option value="">{placeholder}</option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}

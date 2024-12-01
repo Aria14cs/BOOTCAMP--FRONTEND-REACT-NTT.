@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./input.css";
 
 interface BusquedaPorProductoProps {
   onSearch: (query: string) => void;
@@ -22,7 +23,7 @@ const BusquedaPorProducto: React.FC<BusquedaPorProductoProps> = ({
       id="buscador"
       value={query}
       onChange={handleInputChange}
-      className="Buscador"
+      className="buscador"
     />
   );
 };

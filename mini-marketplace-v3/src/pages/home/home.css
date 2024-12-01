@@ -23,3 +23,17 @@
 .contenedor-header-carrito {
   background: black;
 }
+
+.contenedor-header-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-header-carrito {
+  position: relative; /* Para que el float afecte solo a los elementos dentro de este contenedor */
+}
+
+.carrito {
+  float: right;
+}

@@ -1,0 +1,11 @@
+.buscador {
+  width: 10%;
+  height: 2%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}

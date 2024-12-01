@@ -10,12 +10,11 @@ import BusquedaPorProducto from "../../components/input/input";
 import CarritoCompra from "../../components/carrito-compra/carrito-compra";
 
 function Home() {
-  const { productos, categorias, error } = useCharacter(); // Desestructuramos también el estado error y loading
-  const { cartItems, addToCart } = useCart(); // Extraemos los datos del carrito
+  const { productos, categorias, error } = useCharacter();
+  const { cartItems, addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  // Filtra los productos por la categoría seleccionada
   const filteredProducts = productos?.length
     ? productos.filter((product) => {
         const matchesCategory =
@@ -35,29 +34,25 @@ function Home() {
     setSearchQuery(query);
   };
 
-  // Si hay un error, lo mostramos en lugar de los productos
   if (error) {
     return (
       <div className="error-message">
-        <p>{error}</p> {/* Mostramos el mensaje de error */}
+        <p>{error}</p>
       </div>
     );
   }
-
-  // Si está cargando, mostramos un mensaje de carga
 
   return (
     <>
       <div className="contenedor-productos">
         <div className="contenedor-header-carrito">
           <Header />
-          <CarritoCompra cantidadProductos={cartItems.length} />{" "}
-          {/* Mostramos la cantidad de productos en el carrito */}
+          <CarritoCompra cantidadProductos={cartItems.length} />
         </div>
 
         <div className="busqueda">
-          <BusquedaPorProducto onSearch={handleSearch} />{" "}
-          {/* Pasamos la función de búsqueda */}
+          <BusquedaPorProducto onSearch={handleSearch} />
+
           {categorias.length > 0 ? (
             <SelectorCategoria
               categorias={categorias.map((categoria) => ({
@@ -65,21 +60,20 @@ function Home() {
                 label: categoria.name,
               }))}
               onCategoryChange={handleCategoryChange}
-              selectedCategory={selectedCategory} // Pasamos el valor seleccionado
+              selectedCategory={selectedCategory}
             />
           ) : (
             <p>No hay categorías disponibles</p>
           )}
         </div>
 
-        {/* Mostrar los productos filtrados */}
         {filteredProducts?.length ? (
           <div className="productos-lista">
             {filteredProducts.map((product) => (
               <CardProductos
                 key={product.id}
-                product={product} // Pasamos 'product' en lugar de 'character'
-                onAddToCart={() => addToCart(product)} // Añadimos el producto al carrito
+                product={product}
+                onAddToCart={() => addToCart(product)}
               />
             ))}
           </div>

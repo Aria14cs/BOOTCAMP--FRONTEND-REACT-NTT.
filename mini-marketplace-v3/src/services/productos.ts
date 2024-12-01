@@ -16,7 +16,7 @@ export const getProductos = async (): Promise<Productos[] | undefined> => {
     return getProductosData;
   } catch (error) {
     console.log({ error });
-    return undefined; 
+    return undefined;
   }
 };
 
@@ -31,8 +31,9 @@ export const getCategoria = async (): Promise<Categoria[] | undefined> => {
     console.log("Respuesta de la API:", dataCategoria);
     const getDataCategoria = dataCategoria.map(getCategoriaMapper);
     console.log({ getDataCategoria });
-    return getDataCategoria; 
+    return getDataCategoria;
   } catch (error) {
     console.error("Error al obtener categorías:", error);
-    return undefined; 
+    return undefined;
+  }
 };
