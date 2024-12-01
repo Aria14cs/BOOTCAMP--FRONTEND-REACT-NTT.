@@ -1,38 +1,61 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import Boton from "../botones/boton";
+import "@testing-library/jest-dom";
 
 describe("Componente Boton", () => {
-  test("debe renderizar con el texto proporcionado", () => {
-    render(<Boton text="Hacer clic" color="primary" size="medium" />);
-    const boton = screen.getByRole("button", { name: /hacer clic/i });
+  it("debe renderizar el texto pasado como prop", () => {
+    render(<Boton text="Haz clic aquí" color="blue" size="medium" />);
+    const boton = screen.getByText("Haz clic aquí");
     expect(boton).toBeInTheDocument();
   });
 
-  test("debe aplicar la clase de color correctamente", () => {
-    render(<Boton text="Hacer clic" color="secondary" size="medium" />);
-    const boton = screen.getByRole("button", { name: /hacer clic/i });
-    expect(boton).toHaveClass("button-secondary");
+  it("debe aplicar la clase de color correctamente cuando es 'red'", () => {
+    render(<Boton text="Botón Rojo" color="red" size="medium" />);
+    const boton = screen.getByText("Botón Rojo");
+
+    expect(boton).toHaveClass("button-red");
   });
 
-  test("debe aplicar la clase de tamaño correctamente", () => {
-    render(<Boton text="Hacer clic" color="primary" size="large" />);
-    const boton = screen.getByRole("button", { name: /hacer clic/i });
-    expect(boton).toHaveClass("button-large");
+  it("debe aplicar la clase de color correctamente cuando es 'AzulCielo'", () => {
+    render(<Boton text="Añadir al carrito" color="AzulCielo" size="medium" />);
+    const boton = screen.getByText("Añadir al carrito");
+
+    expect(boton).toHaveClass("button-AzulCielo");
   });
 
-  test("debe ejecutar la función onClick cuando se hace clic", () => {
+  it("debe aplicar la clase de color correctamente cuando es 'blue'", () => {
+    render(<Boton text="Botón Azul" color="blue" size="medium" />);
+    const boton = screen.getByText("Botón Azul");
+
+    expect(boton).toHaveClass("button-blue");
+  });
+
+  it("debe llamar a la función onClick cuando se hace clic", () => {
     const mockOnClick = jest.fn();
+
     render(
       <Boton
-        text="Hacer clic"
-        color="primary"
-        size="medium"
+        text="Botón con Click"
+        color="red"
+        size="small"
         onClick={mockOnClick}
       />
     );
-    const boton = screen.getByRole("button", { name: /hacer clic/i });
+
+    const boton = screen.getByText("Botón con Click");
     fireEvent.click(boton);
+
     expect(mockOnClick).toHaveBeenCalledTimes(1);
+  });
+
+  it("no llama a la función onClick si no se pasa una función", () => {
+    const mockOnClick = jest.fn();
+
+    render(<Boton text="Botón sin Click" color="yellow" size="large" />);
+
+    const boton = screen.getByText("Botón sin Click");
+    fireEvent.click(boton);
+
+    expect(mockOnClick).not.toHaveBeenCalled();
   });
 });

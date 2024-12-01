@@ -1,4 +1,3 @@
-// src/components/Carrito/CarritoTotal.tsx
 import React from "react";
 
 interface CartItem {

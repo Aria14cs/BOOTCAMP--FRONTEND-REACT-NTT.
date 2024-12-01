@@ -1,52 +1,93 @@
 /* formulario.css */
 .formulario-container {
   max-width: 500px;
-  margin: 50px auto; /* Centrar horizontal y añadir espacio vertical */
+  margin: 50px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   border: 1px solid #ddd;
   display: flex;
-  flex-direction: column; /* Asegurar disposición vertical */
-  align-items: center; /* Centrar los elementos horizontalmente */
+  flex-direction: column;
+  align-items: center;
 }
 
 .formulario-lista {
   list-style: none;
   padding: 0;
-  width: 80%; /* Para que los campos ocupen el ancho completo del contenedor */
-}
-
-.campo-formulario {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  width: 100%; /* Asegura que todos los campos se alineen correctamente */
+  width: 80%;
 }
 
 .campo-formulario label {
-  width: 30%; /* Ancho fijo para todos los labels */
-  text-align: right; /* Texto del label alineado a la derecha */
+  width: 30%;
+  text-align: right;
   font-weight: bold;
-  padding-right: 10px; /* Espaciado entre label y input */
+  padding-right: 10px;
 }
 
-.campo-formulario input {
-  width: 65%; /* Espacio restante para el input */
-  padding: 8px;
-  border: 1px solid #ccc;
+.form-input {
+  width: 100%;
+  padding: 10px;
   border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.campo-formulario input:focus {
+.form-input:focus {
   border-color: #007bff;
-  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .boton {
   display: block;
-  margin-top: 20px; /* Separar el botón del formulario */
+  margin-top: 20px;
   cursor: pointer;
   text-align: center;
+}
+
+.select-input-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.select-input-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.select-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.select-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.select-input-container .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.select-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
 }

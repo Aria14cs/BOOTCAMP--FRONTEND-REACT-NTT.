@@ -1,24 +1,24 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { Productos } from "../domain/productos/productos"; // Importa el contexto
+import { Productos } from "../domain/productos/productos";
 
 export const useCart = () => {
-  const { state, dispatch } = useContext(CartContext); // Obtener el state y dispatch
+  const { state, dispatch } = useContext(CartContext);
 
   const addToCart = (product: Productos) => {
     dispatch({ type: "AÑADIR_AL_CARRITO", product });
   };
 
   const increaseQuantity = (productId: number) => {
-    dispatch({ type: "AUMENTAR_CANTIDAD", productId }); // Asegúrate de que la acción sea correcta
+    dispatch({ type: "AUMENTAR_CANTIDAD", productId });
   };
 
   const decreaseQuantity = (productId: number) => {
-    dispatch({ type: "DISMINUIR_CANTIDAD", productId }); // Decrecer cantidad correctamente
+    dispatch({ type: "DISMINUIR_CANTIDAD", productId });
   };
 
   const removeFromCart = (productId: number) => {
-    dispatch({ type: "ELIMINAR_DEL_CARRITO", productId }); // Eliminar producto del carrito
+    dispatch({ type: "ELIMINAR_DEL_CARRITO", productId });
   };
 
   const clearCart = () => {

@@ -43,7 +43,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
                 text="-"
                 color="blue"
                 size="small"
-                onClick={() => decreaseQuantity(item.product.id)} // Usar el dispatch
+                onClick={() => decreaseQuantity(item.product.id)}
                 aria-label={`Disminuir cantidad de ${item.product.title}`}
               />
               {item.quantity}
@@ -51,7 +51,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
                 text="+"
                 color="blue"
                 size="small"
-                onClick={() => increaseQuantity(item.product.id)} // Usar el dispatch
+                onClick={() => increaseQuantity(item.product.id)}
                 aria-label={`Aumentar cantidad de ${item.product.title}`}
               />
             </td>
@@ -60,7 +60,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
                 text="Eliminar"
                 color="blue"
                 size="small"
-                onClick={() => removeFromCart(item.product.id)} // Usar el dispatch
+                onClick={() => removeFromCart(item.product.id)}
                 aria-label={`Eliminar ${item.product.title} del carrito`}
               />
             </td>

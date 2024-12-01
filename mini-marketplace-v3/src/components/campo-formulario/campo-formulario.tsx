@@ -1,4 +1,4 @@
-import React from "react";
+import "./campoFormulario.css";
 
 interface CampoFormularioProps {
   label: string;
@@ -11,7 +11,7 @@ interface CampoFormularioProps {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;
   errorMessage?: string;
-  component?: React.ReactNode; // Prop opcional para un componente personalizado
+  component?: React.ReactNode;
 }
 
 const CampoFormulario: React.FC<CampoFormularioProps> = ({
@@ -29,16 +29,15 @@ const CampoFormulario: React.FC<CampoFormularioProps> = ({
     <li>
       <label htmlFor={id}>{label}:</label>
       {component ? (
-        component // Si hay un componente personalizado, lo renderizamos
+        component
       ) : (
         <input
           type={type}
           id={id}
           name={name}
           className={className}
-          value={value} // Asegurarse de que el valor sea controlado
-          onChange={onChange} // Asegurarse de que el onChange esté pasando el cambio
-          required
+          value={value}
+          onChange={onChange}
         />
       )}
       {errorMessage && <span className="error">{errorMessage}</span>}

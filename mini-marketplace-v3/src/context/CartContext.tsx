@@ -11,10 +11,9 @@ type CartState = {
 };
 
 const initialState: CartState = {
-  cartItems: [], // Estado inicial vacío
+  cartItems: [],
 };
 
-// Definimos las acciones disponibles para el carrito
 type CartAction =
   | { type: "AÑADIR_AL_CARRITO"; product: Productos }
   | { type: "ELIMINAR_DEL_CARRITO"; productId: number }
@@ -22,7 +21,6 @@ type CartAction =
   | { type: "DISMINUIR_CANTIDAD"; productId: number }
   | { type: "VACIAR_CARRITO" };
 
-// Reducer que maneja las acciones del carrito
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "AÑADIR_AL_CARRITO":
@@ -83,7 +81,6 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
   }
 };
 
-// Contexto y proveedor del carrito
 export const CartContext = createContext<{
   state: CartState;
   dispatch: React.Dispatch<CartAction>;

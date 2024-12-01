@@ -20,11 +20,11 @@ const Title: React.FC<TitleProps> = ({
   return (
     <h1
       className={`${sizeStyles[size]} ${alignStyles[align]} font-bold ${className}`}
-      style={{ color }} // Agregamos el color directamente
+      style={{ color }}
     >
       {text}
     </h1>
   );
 };
 
-export default Title; // Exportación por defecto
+export default Title;

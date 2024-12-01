@@ -1,11 +1,11 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 
 interface SelectInputProps {
-  options: { value: string; label: string }[]; // Opciones del select
-  selectedValue: string; // Valor seleccionado
-  onChange: (value: string) => void; // Función para manejar el cambio
-  label?: string; // Etiqueta opcional para el select
-  placeholder?: string; // Título dinámico para la opción
+  options: { value: string; label: string }[];
+  selectedValue: string;
+  onChange: (value: string) => void;
+  label: string;
+  className?: string;
 }
 
 const SelectInput: React.FC<SelectInputProps> = ({
@@ -13,25 +13,17 @@ const SelectInput: React.FC<SelectInputProps> = ({
   selectedValue,
   onChange,
   label,
-  placeholder = "Open this select menu", // Valor por defecto para el título
+  className,
 }) => {
-  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    onChange(event.target.value); // Actualiza el valor seleccionado
-  };
-
   return (
-    <div className="form-group">
-      {label && <label className="block mb-2">{label}</label>}{" "}
-      {/* Si hay etiqueta, se muestra */}
+    <div className={`select-input-container ${className}`}>
+      <label>{label}</label>
       <select
-        className="form-select"
         value={selectedValue}
-        onChange={handleChange}
-        aria-label="Default select example"
+        onChange={(e) => onChange(e.target.value)}
+        className="select-input"
       >
-        <option value="" disabled>
-          {placeholder} {/* Título dinámico según la vista */}
-        </option>
+        <option value="">Seleccione un distrito</option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}

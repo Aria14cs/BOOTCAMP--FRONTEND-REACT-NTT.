@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732682174054" clover="3.2.0">
-  <project timestamp="1732682174054" name="All files">
-    <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="6" coveredelements="6" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
-    <file name="boton.tsx" path="C:\Users\arian\OneDrive\Desktop\NTT-DATA\mini-marketplace-v3\src\components\botones\boton.tsx">
+<coverage generated="1733025398754" clover="3.2.0">
+  <project timestamp="1733025398755" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3" elements="24" coveredelements="24" complexity="0" loc="15" ncloc="15" packages="3" files="3" classes="3"/>
+    <package name="botones">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="5" type="stmt"/>
-      <line num="14" count="5" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
-    </file>
+      <file name="boton.tsx" path="C:\Users\arian\OneDrive\Desktop\NTT-DATA\mini-marketplace-v3\src\components\botones\boton.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="campo-formulario">
+      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="campo-formulario.tsx" path="C:\Users\arian\OneDrive\Desktop\NTT-DATA\mini-marketplace-v3\src\components\campo-formulario\campo-formulario.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="card">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="cardProductos.tsx" path="C:\Users\arian\OneDrive\Desktop\NTT-DATA\mini-marketplace-v3\src\components\card\cardProductos.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
