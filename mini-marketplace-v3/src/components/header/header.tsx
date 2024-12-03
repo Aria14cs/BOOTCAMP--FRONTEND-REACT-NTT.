@@ -1,5 +1,6 @@
 import "./header.css";
 import { useUser } from "@/hooks/usuario";
+import "../../styles/variables.css";
 
 function Header() {
   const { user, isAuthenticated } = useUser();
@@ -20,7 +21,7 @@ function Header() {
             />
           </div>
           <h1>G & E </h1>
-          <div className="user-info">
+          <div className="usuario-nombre">
             {isAuthenticated ? (
               <p>Bienvenido, {user?.username}!</p>
             ) : (

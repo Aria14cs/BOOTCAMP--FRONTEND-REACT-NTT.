@@ -62,10 +62,8 @@ const Login: React.FC = () => {
     try {
       setErrorMessages({ username: "", password: "", general: "" });
 
-      // Llamar a la función de autenticación con los datos del formulario
       const authState = await postAuth(formData.username, formData.password);
 
-      // Guardar el nombre de usuario en el contexto
       setUser({ username: formData.username });
 
       console.log("Inicio de sesión exitoso", authState);

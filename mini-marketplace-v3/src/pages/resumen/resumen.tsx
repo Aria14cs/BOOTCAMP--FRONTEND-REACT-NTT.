@@ -14,7 +14,6 @@ const Resumen = () => {
   const campos = [
     { label: "Nombre", type: "text", id: "nombre", name: "nombre" },
     { label: "Apellidos", type: "text", id: "apellidos", name: "apellidos" },
-    // El campo "Distrito" se reemplaza por el componente SelectDistritos
     {
       label: "Distrito",
       type: "select",

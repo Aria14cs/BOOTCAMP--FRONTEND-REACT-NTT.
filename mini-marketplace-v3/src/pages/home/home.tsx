@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCharacter } from "../../hooks/useCharacter";
-import { useCart } from "../../hooks/useCart"; // Ya tienes esto correctamente
+import { useCart } from "../../hooks/useCart";
 import CardProductos from "../../components/card/cardProductos";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
