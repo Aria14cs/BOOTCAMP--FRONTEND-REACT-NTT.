@@ -7,9 +7,10 @@ interface CampoFormularioProps {
   name: string;
   className: string;
   value: string;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => void;
+  // onChange: (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  // ) => void;
+  onChange: (e: React.ChangeEvent<T>) => void;
   errorMessage?: string;
   component?: React.ReactNode;
 }

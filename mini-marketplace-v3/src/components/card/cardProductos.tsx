@@ -31,7 +31,7 @@ const CardProductos: React.FC<CardProductosProps> = ({
 
       <Boton
         text="Añadir al carrito"
-        color="AzulCielo"
+        color="orange"
         size="large"
         onClick={onAddToCart}
       />

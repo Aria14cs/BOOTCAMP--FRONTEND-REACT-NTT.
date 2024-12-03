@@ -1,7 +1,7 @@
 .carrito-container {
   position: relative;
   display: inline-block;
-  background: black;
+  background: var(--background2);
   height: 60px;
 }
 
@@ -9,8 +9,8 @@
   position: absolute;
   top: -4px;
   right: -4px;
-  background-color: orangered;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--background);
   width: 20px;
   height: 20px;
   border-radius: 50%;

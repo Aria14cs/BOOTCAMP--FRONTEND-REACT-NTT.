@@ -41,7 +41,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
             <td>
               <Boton
                 text="-"
-                color="blue"
+                color="orange"
                 size="small"
                 onClick={() => decreaseQuantity(item.product.id)}
                 aria-label={`Disminuir cantidad de ${item.product.title}`}
@@ -49,7 +49,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
               {item.quantity}
               <Boton
                 text="+"
-                color="blue"
+                color="orange"
                 size="small"
                 onClick={() => increaseQuantity(item.product.id)}
                 aria-label={`Aumentar cantidad de ${item.product.title}`}
@@ -58,7 +58,7 @@ const CarritoTabla: React.FC<CarritoTablaProps> = ({ cartItems }) => {
             <td className="px-4 py-2">
               <Boton
                 text="Eliminar"
-                color="blue"
+                color="orange"
                 size="small"
                 onClick={() => removeFromCart(item.product.id)}
                 aria-label={`Eliminar ${item.product.title} del carrito`}

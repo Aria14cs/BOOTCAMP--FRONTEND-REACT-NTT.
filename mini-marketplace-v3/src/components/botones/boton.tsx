@@ -1,5 +1,4 @@
 import "./boton.css";
-
 interface BotonProps {
   text: string;
   color: string;

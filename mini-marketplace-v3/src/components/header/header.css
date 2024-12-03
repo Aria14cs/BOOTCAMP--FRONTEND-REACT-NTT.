@@ -1,35 +1,33 @@
-
-/* Estilo para el header */
 header {
-    width: 100%;
-    background: #000;
-    /* padding: 5px 20px; */
-
+  width: 100%;
+  background: var(--background2);
+  /* padding: 5px 20px; */
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
 .images-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.store, .carrito {
-    width: 40px;
-    height: 40px;
+.store,
+.carrito {
+  width: 40px;
+  height: 40px;
 }
 
 h1 {
-    color: #fff;
-    font-size: 24px;
-    margin: 10px; 
-    flex-grow: 1;
-    text-align: left;
- font-style: italic;
+  color: var(--background);
+  font-size: 24px;
+  margin: 10px;
+  flex-grow: 1;
+  text-align: left;
+  font-style: italic;
 }

@@ -1,7 +1,3 @@
-:root {
-  --precio-texto-color: #686d76;
-}
-
 .contenedor-productos {
   background: rgb(173, 176, 176);
 }
@@ -21,19 +17,11 @@
 }
 
 .contenedor-header-carrito {
-  background: black;
+  background: var(--background2);
 }
 
 .contenedor-header-carrito {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.contenedor-header-carrito {
-  position: relative; /* Para que el float afecte solo a los elementos dentro de este contenedor */
-}
-
-.carrito {
-  float: right;
 }

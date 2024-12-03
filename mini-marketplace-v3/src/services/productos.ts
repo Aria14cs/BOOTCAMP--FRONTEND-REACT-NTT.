@@ -37,3 +37,18 @@ export const getCategoria = async (): Promise<Categoria[] | undefined> => {
     return undefined;
   }
 };
+
+export const postAuth = async (username: string, password: string) => {
+  const response = await fetch(`${BASE_URL}/auth/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password }),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Login fallido");
+  }
+
+  return await response.json();
+};

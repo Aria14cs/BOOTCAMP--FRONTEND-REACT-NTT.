@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 
 describe("Componente Boton", () => {
   it("debe renderizar el texto pasado como prop", () => {
-    render(<Boton text="Haz clic aquí" color="blue" size="medium" />);
+    render(<Boton text="Haz clic aquí" color="orange" size="medium" />);
     const boton = screen.getByText("Haz clic aquí");
     expect(boton).toBeInTheDocument();
   });

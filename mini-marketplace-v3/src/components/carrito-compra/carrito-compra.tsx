@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ModuleRoutes } from "../../routes/routes";
+import "./carrito-compra.css";
 
 interface CarritoCompraProps {
   cantidadProductos: number;

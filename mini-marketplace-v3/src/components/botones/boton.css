@@ -1,13 +1,7 @@
-/* Button.css */
-:root {
-  --button-productos-bg-color: #6eacda;
-  --color-texto-color: #ffffff;
-}
-
 .button {
   border: none;
   border-radius: 5px;
-  color: white;
+  color: var(--background-color);
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -28,33 +22,22 @@
   font-size: 16px;
 }
 
-/* Colores personalizados */
-.button-red {
-  background-color: red;
+.button-orange {
+  background: var(--primary-color);
 }
 
-.button-AzulCielo {
-  background: var(--button-productos-bg-color);
+.button-orange {
+  background-color: var(--primary-color);
 }
 
-.button-blue {
-  background-color: blue;
+.button-orange :hover {
+  background-color: var(--primary-color);
 }
 
-/* Efecto hover */
-.button-red:hover {
-  background-color: darkred;
+.button-orange:hover {
+  background-color: var(--text-color);
 }
 
-.button-AzulCielo :hover {
-  background-color: var(--button-productos-bg-color);
-}
-
-.button-blue:hover {
-  background-color: darkblue;
-}
-
-/* Efecto de clic */
 .button:active {
   transform: scale(0.98);
 }

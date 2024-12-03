@@ -87,7 +87,7 @@ const Formulario: React.FC<FormularioProps> = ({ campos, onSubmit }) => {
           />
         </div>
       ))}
-      <Boton text="Comprar" color="blue" size="large" />
+      <Boton text="Comprar" color="orange" size="large" />
     </form>
   );
 };
