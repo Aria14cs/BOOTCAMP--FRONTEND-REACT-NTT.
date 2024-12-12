@@ -1,3 +1,4 @@
+// falta test
 import SelectInput from "../selec/SelectInput";
 
 interface CategoriaOption {

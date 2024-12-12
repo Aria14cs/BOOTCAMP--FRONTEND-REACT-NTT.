@@ -1,3 +1,4 @@
+// falta test
 import { useState } from "react";
 import { useCharacter } from "../../hooks/useCharacter";
 import { useCart } from "../../hooks/useCart"; // Ya tienes esto correctamente
