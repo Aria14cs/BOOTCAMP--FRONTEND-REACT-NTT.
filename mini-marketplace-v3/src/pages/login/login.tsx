@@ -1,3 +1,4 @@
+// faltan tests y cumplir los criterios de aceptaci'on solicitados
 import React, { useState } from "react";
 import Title from "@/components/title/title";
 import CampoFormulario from "@/components/campo-formulario/campo-formulario";

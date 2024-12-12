@@ -1,3 +1,4 @@
+// faltan tests y cumplir los criterios de aceptaci'on solicitados
 import { useState } from "react";
 import { useCharacter } from "../../hooks/useCharacter";
 import { useCart } from "../../hooks/useCart";
